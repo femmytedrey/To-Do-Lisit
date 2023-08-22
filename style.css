@@ -1,0 +1,24 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap');
+*{
+    box-sizing: border-box;
+    font-weight: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #135677, #4e085f);
+    padding: 10px;
+}
+
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    height: 200px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px, 30px, 70px;
+    border-radius: 10px;
+}
