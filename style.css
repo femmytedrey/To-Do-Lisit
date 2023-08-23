@@ -18,29 +18,21 @@
     --list-item-bg: #edeef0; /* Light gray */
     --list-item-text: #555; /* Dim gray */
     --slider-button: #c3c3c3;
-
-    --dark-primary-bg: #121212; /* Dark background */
-    --dark-secondary-bg: #292929; /* Slightly lighter background */
-    --dark-text-color: #ffffff; /* White text on dark background */
-  
-    --dark-button-bg: #ff935a; /* Lighter orange for buttons */
-    --dark-button-text: #121212; /* Dark text on light button background */
-  
-    --dark-list-item-bg: #1f1f1f; /* Dark gray for list items */
-    --dark-list-item-text: #aaa;
+    --text-color1: black;
     
   }
 
 .darkmode{
-    --dark-primary-bg: #121212; /* Dark background */
-    --dark-secondary-bg: #292929; /* Slightly lighter background */
-    --dark-text-color: #ffffff; /* White text on dark background */
+    --primary-bg: #000000; /* Dark background */
+    --secondary-bg: #343434; /* Slightly lighter background */
+    --text-color: #ededed; /* White text on dark background */
   
-    --dark-button-bg: #ff935a; /* Lighter orange for buttons */
-    --dark-button-text: #121212; /* Dark text on light button background */
+    --button-bg: #fc6857; /* Lighter orange for buttons */
+    --button-text: #313131; /* Dark text on light button background */
   
-    --dark-list-item-bg: #1f1f1f; /* Dark gray for list items */
-    --dark-list-item-text: #aaa;
+    --list-item-bg: #1f1f1f; /* Dark gray for list items */
+    --list-item-text: #aaa;
+    --text-color1: #ededed;
 }
 
 .container{
@@ -87,7 +79,8 @@ input{
     outline: none;
     background: transparent;
     padding: 10px;
-    font-weight: 14px;
+    font-size: 15px;
+    color: var(--text-color1);
 
 }
 button{
@@ -108,6 +101,8 @@ ul li{
     user-select: none;
     cursor: pointer;
     position: relative;
+    /* color: var(--dark-text-color); */
+    color: var(--text-color1);
 }
 
 ul li::before{
@@ -121,6 +116,7 @@ ul li::before{
     background-position: center;
     top: 12px;
     left: 8px;
+    
 }
 
 ul li.checked{
@@ -182,6 +178,8 @@ ul li span:hover{
 .switchercontent{
     font-size: 18px;
     padding-bottom: 20px;
+    color: var(--text-color1);
+    
 }
 .switcher .toggle.active{
     background: var(--button-bg);
