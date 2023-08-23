@@ -47,7 +47,7 @@ body.dark-mode{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 300px;
+    
 }
 
 .todo-app{
@@ -237,9 +237,6 @@ ul li span:hover{
         font-size: 15px;
         color: var(--text-color1);
         width: 175px;
-        
-
-    
     }
     
 }
