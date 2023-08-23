@@ -19,10 +19,13 @@
     --list-item-text: #555; /* Dim gray */
     --slider-button: #c3c3c3;
     --text-color1: black;
-    
-  }
 
-.darkmode{
+   
+}
+    
+
+
+body.dark-mode{
     --primary-bg: #000000; /* Dark background */
     --secondary-bg: #343434; /* Slightly lighter background */
     --text-color: #ededed; /* White text on dark background */
@@ -33,6 +36,7 @@
     --list-item-bg: #1f1f1f; /* Dark gray for list items */
     --list-item-text: #aaa;
     --text-color1: #ededed;
+    --dark-unchecked-border: 1px solid rgb(93, 93, 93);
 }
 
 .container{
@@ -116,6 +120,8 @@ ul li::before{
     background-position: center;
     top: 12px;
     left: 8px;
+    /* border: 1px solid rgb(93, 93, 93); */
+    border: var(--dark-unchecked-border);
     
 }
 
@@ -125,6 +131,7 @@ ul li.checked{
 }
 ul li.checked::before{
     background-image: url(images/checked.svg);
+    border: none;
 }
 
 ul li span{
@@ -168,7 +175,7 @@ ul li span:hover{
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    background: var(--button-text);
+    background: white;
     cursor: pointer;
     position: absolute;
     top: 3px;
@@ -186,4 +193,53 @@ ul li span:hover{
 }
 .switcher .toggle.active .toggle-button{
     left: 28px;
+}
+
+
+@media (max-width: 660px) {
+    .container{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .todo-app{
+        width: 100%;
+        max-width: none;
+        background: var(--button-text);
+        margin: 100px auto 20px;
+        padding: 40px 10px 70px;
+        border-radius: 10px;
+    }
+    .row{
+        width: 100%;
+        display: flex;
+        position: relative;
+    }
+
+    button{
+        outline: none;
+        border: none;
+        padding: 16px 30px;
+        background: var(--button-bg);
+        color: var(--button-text);
+        font-size: 16px;
+        border-radius: 30px;
+        cursor: pointer;
+        width: 35%
+    }
+
+    input{
+        flex: 1;
+        border: none;
+        outline: none;
+        background: transparent;
+        padding: 10px;
+        font-size: 15px;
+        color: var(--text-color1);
+        width: 175px;
+        
+
+    
+    }
+    
 }
