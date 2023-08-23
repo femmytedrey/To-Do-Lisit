@@ -6,24 +6,65 @@
     padding: 0;
     margin: 0;
 }
+:root {
+    /* Color Palette */
+    --primary-bg: #135677; /* Dark blue */
+    --secondary-bg: #4e085f; /* Deep magenta */
+    --text-color: #002765; /* Dark blue */
+  
+    --button-bg: #ff5945; /* Bright orange-red */
+    --button-text: #fff; /* White */
+  
+    --list-item-bg: #edeef0; /* Light gray */
+    --list-item-text: #555; /* Dim gray */
+    --slider-button: #c3c3c3;
+
+    --dark-primary-bg: #121212; /* Dark background */
+    --dark-secondary-bg: #292929; /* Slightly lighter background */
+    --dark-text-color: #ffffff; /* White text on dark background */
+  
+    --dark-button-bg: #ff935a; /* Lighter orange for buttons */
+    --dark-button-text: #121212; /* Dark text on light button background */
+  
+    --dark-list-item-bg: #1f1f1f; /* Dark gray for list items */
+    --dark-list-item-text: #aaa;
+    
+  }
+
+.darkmode{
+    --dark-primary-bg: #121212; /* Dark background */
+    --dark-secondary-bg: #292929; /* Slightly lighter background */
+    --dark-text-color: #ffffff; /* White text on dark background */
+  
+    --dark-button-bg: #ff935a; /* Lighter orange for buttons */
+    --dark-button-text: #121212; /* Dark text on light button background */
+  
+    --dark-list-item-bg: #1f1f1f; /* Dark gray for list items */
+    --dark-list-item-text: #aaa;
+}
+
 .container{
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(135deg, #135677, #4e085f);
+    background: linear-gradient(135deg, var(--primary-bg), var(--secondary-bg));
     padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 300px;
 }
 
 .todo-app{
     width: 100%;
     max-width: 540px;
-    background: #fff;
+    background: var(--button-text);
     margin: 100px auto 20px;
     padding: 40px 30px 70px;
     border-radius: 10px;
 }
 
 .todo-app h2{
-    color: #002765;
+    color: var(--text-color);
     display: flex;
     align-items: center;
     margin-bottom: 20px;
@@ -35,7 +76,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #edeef0;
+    background: var(--list-item-bg);
     border-radius: 30px;
     padding-left: 20px;
     margin-bottom: 25px;
@@ -53,8 +94,8 @@ button{
     outline: none;
     border: none;
     padding: 16px 50px;
-    background: #ff5945;
-    color: #fff;
+    background: var(--button-bg);
+    color: var(--button-text);
     font-size: 16px;
     border-radius: 40px;
     cursor: pointer;
@@ -83,7 +124,7 @@ ul li::before{
 }
 
 ul li.checked{
-    color: #555;
+    color: var(--list-item-text);
     text-decoration: line-through;
 }
 ul li.checked::before{
@@ -97,12 +138,46 @@ ul li span{
     width: 40px;
     height: 40px;
     font-size: 22px;
-    color: #555;
+    color: var(--list-item-text);
     line-height: 40px;
     text-align: center;
     border-radius: 50%;
 }
 
 ul li span:hover{
-    background: #edeef0;
+    background: var(--list-item-bg);
+}
+
+.switcher{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    margin-top: 50px;
+    flex-direction: column;
+    position: relative;
+}
+.slider{
+    width: 55px;
+    height: 30px;
+    background: var(--slider-button);
+    border-radius: 20px;
+    border: none;
+    position: relative;
+}
+.toggle-button{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--button-text);
+    cursor: pointer;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+}
+.switchercontent{
+    font-size: 18px;
+    padding-bottom: 20px;
 }

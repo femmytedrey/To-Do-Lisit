@@ -2,7 +2,12 @@ const inputBox = document.getElementById("input-box");
 const listContainer = document.getElementById("list-container");
 const button = document.getElementById("addButton");
 
-
+window.addEventListener('DOMContentLoaded', () => {
+    const savedData = localStorage.getItem("data");
+    if (savedData) {
+        listContainer.innerHTML = savedData;
+    }
+});
 
 button.addEventListener('click', () => {
     if(inputBox.value === ''){
@@ -37,3 +42,5 @@ const saveData = () =>{
         console.error("Error while saving data:", error);
       }
 };
+
+
