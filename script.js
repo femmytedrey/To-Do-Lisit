@@ -44,3 +44,14 @@ const saveData = () =>{
 };
 
 
+const toggle = document.querySelector(".toggle");
+const animatedToggle = document.querySelector(".toggle-button");
+
+animatedToggle.addEventListener('click', () => {
+    toggle.classList.toggle("active");
+    if(toggle.classList.contains("active")){
+        document.querySelector(".switchercontent").innerHTML = "Switch to light mode";
+    }else{
+        document.querySelector(".switchercontent").innerHTML = "Switch to dark mode";
+    }
+});
