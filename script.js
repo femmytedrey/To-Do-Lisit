@@ -52,7 +52,7 @@ animatedToggle.addEventListener('click', () => {
     document.body.classList.toggle("dark-mode");
     if(toggle.classList.contains("active")){
         document.querySelector(".switchercontent").innerHTML = "Switch to light mode";
-        
+
     }else{
         document.querySelector(".switchercontent").innerHTML = "Switch to dark mode";
     }
